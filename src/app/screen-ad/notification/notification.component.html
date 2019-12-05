@@ -7,11 +7,21 @@
   <mat-card class="matCard"
     >Danh Sách các cư dân trong tòa nhà house Care</mat-card
   >
-  <mat-form-field>
-    <input matInput placeholder="Filter" />
-  </mat-form-field>
-
-  <table mat-table [dataSource]="notification" class="mat-elevation-z8">
+  <div class="search-hero">
+    <input
+      class="form-control"
+      type="text"
+      name="search"
+      [(ngModel)]="searchText"
+      autocomplete="off"
+      placeholder="search"
+    />
+  </div>
+  <table
+    mat-table
+    [dataSource]="notification | filter: searchText"
+    class="mat-elevation-z8"
+  >
     <!-- id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>id</th>

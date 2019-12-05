@@ -13,7 +13,7 @@ import {
 })
 export class AddIssueComponent implements OnInit {
   issueForm = this.fb.group({
-    id: ["", Validators.required],
+    // id: ["", Validators.required],
     tittle: ["", Validators.required],
     desc: ["", Validators.required]
   });

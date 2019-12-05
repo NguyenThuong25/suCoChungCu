@@ -28,7 +28,7 @@ export class ListUserComponent implements OnInit {
     "update",
     "delete"
   ];
-
+  searchText;
   listUser;
 
   applyFilter(event) {

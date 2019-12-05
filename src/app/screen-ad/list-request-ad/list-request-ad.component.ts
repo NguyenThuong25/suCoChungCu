@@ -49,6 +49,7 @@ export class ListRequestAdComponent implements OnInit {
   listDoing;
   listdone;
   listReject;
+  searchText;
   columnsToDisplay = [
     "id",
     "nameUser",

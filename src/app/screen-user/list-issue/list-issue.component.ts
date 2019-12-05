@@ -17,12 +17,14 @@ export interface Status {
   styleUrls: ["./list-issue.component.css"]
 })
 export class ListIssueComponent implements OnInit {
-  listIssue: Issue[];
+  listIssue;
   displayedColumns: string[] = ["id", "tittle", "desc", "image", "status"];
 
   constructor(private issue: IssueService) {}
 
   ngOnInit() {
-    this.listIssue = this.issue.getdata();
+    this.issue.getissuelist().subscribe(u => {
+      this.listIssue = u;
+    });
   }
 }

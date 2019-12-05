@@ -29,7 +29,7 @@ import { DialogComponent } from "../dialog/dialog.component";
 export class NotificationComponent implements OnInit {
   displayedColumns: string[] = ["id", "tittle", "desc", "delete"];
   notification;
-
+  searchText;
   // applyFilter(filterValue: string) {
   //   this.dataSource.filter = filterValue.trim().toLowerCase();
   // }

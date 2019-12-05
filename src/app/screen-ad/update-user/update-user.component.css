@@ -1,3 +1,6 @@
+html body {
+  background-image: url("/assets/image/Backuser.jpg");
+}
 .addUser-column {
   display: flex;
   flex-direction: column;
@@ -11,9 +14,9 @@
   background-color: #5e59d8;
   padding: 24px;
   color: aliceblue;
-  box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
-  -webkit-box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
 }
 .card {
   position: relative;

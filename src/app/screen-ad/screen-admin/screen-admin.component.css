@@ -8,7 +8,9 @@
   height: 100%; /* Full height */
   /* position: fixed; Make it stick, even on scroll */
   overflow: auto; /* Enable scrolling if the sidenav has too much content */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
 }
 
 .body-menu li a {
@@ -23,10 +25,11 @@
   background-color: #555;
   color: white;
 }
-.body-menu li a:active {
+.body-menu li a.active {
   background-color: #7fafe2;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
-    0 7px 10px -5px rgba(244, 67, 54, 0.4);
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
 }
 .menu {
   width: 15%;
@@ -116,9 +119,9 @@ hr {
   height: 100vh;
 }
 mat-toolbar {
-  box-shadow: -2px 23px 13px -6px rgba(0, 0, 0, 0.34);
-  -webkit-box-shadow: -2px 23px 13px -6px rgba(0, 0, 0, 0.34);
-  -moz-box-shadow: -2px 23px 13px -6px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
 }
 #toolbar {
   background-color: #0c375d;

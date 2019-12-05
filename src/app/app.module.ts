@@ -24,7 +24,7 @@ import { AddUserComponent } from "./screen-ad/add-user/add-user.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { AddNotiComponent } from "./screen-ad/add-noti/add-noti.component";
 import { DialogComponent } from "./screen-ad/dialog/dialog.component";
-
+import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { UpdateUserComponent } from "./screen-ad/update-user/update-user.component";
 
 import { MatTabsModule } from "@angular/material/tabs";
@@ -71,6 +71,7 @@ import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
     MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
+    Ng2SearchPipeModule,
     MatCardModule,
     MatTabsModule,
     StoreModule.forRoot(reducers, {

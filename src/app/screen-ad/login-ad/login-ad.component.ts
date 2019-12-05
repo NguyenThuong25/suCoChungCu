@@ -7,8 +7,6 @@ import { Router } from "@angular/router";
   styleUrls: ["./login-ad.component.css"]
 })
 export class LoginAdComponent implements OnInit {
-  username;
-  pass;
   check(user, pass) {
     console.log(user, pass);
 

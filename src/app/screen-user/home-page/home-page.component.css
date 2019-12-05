@@ -20,9 +20,9 @@
 }
 .nav-menu {
   margin-top: 15px;
-  box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
-  -webkit-box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
 }
 .image-banner {
   color: whitesmoke;
@@ -49,6 +49,10 @@
 
 /* Change the link color on hover */
 .menu li a:hover {
+  background-color: #555;
+  color: white;
+}
+.menu li a.active {
   background-color: #555;
   color: white;
 }

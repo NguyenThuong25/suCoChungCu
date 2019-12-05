@@ -18,9 +18,9 @@ table {
   background-color: #5e59d8;
   padding: 24px;
   color: aliceblue;
-  box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
-  -webkit-box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 9px 20px 24px -5px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
 }
 .card {
   position: relative;
@@ -34,4 +34,11 @@ table {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+.card-footer {
+  text-align: center;
 }
