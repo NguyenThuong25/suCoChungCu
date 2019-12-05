@@ -1,0 +1,27 @@
+<div>
+  <h1>thông tin thông báo</h1>
+  <div [formGroup]="notiForm" class="addUser-column" class="add-noti">
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="tiêu đề"
+        formControlName="tittle"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="nội dung"
+        formControlName="desc"
+      ></textarea>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!notiForm.valid"
+      (click)="addNoti()"
+    >
+      Thêm
+    </button>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="d-flex wrapper">
+  <div class="menu">
+    <ul class="body-menu">
+      <li>
+        <a
+          ><i class="material-icons">
+            house
+          </i>
+          HOUSE CARE</a
+        >
+      </li>
+      <hr />
+      <li class="menu-li">
+        <a routerLink="listUser" routerLinkActive="active"
+          ><i class="material-icons">
+            dashboard
+          </i>
+          Dashboard</a
+        >
+      </li>
+      <li class="menu-li">
+        <a routerLink="listUser" routerLinkActive="active"
+          ><i class="material-icons">
+            supervisor_account
+          </i>
+          Quản Lý Cư Dân</a
+        >
+      </li>
+      <li class="menu-li">
+        <a routerLink="listRequest" routerLinkActive="active"
+          ><i class="material-icons">
+            today
+          </i>
+          Quản Lý Sự Cố</a
+        >
+      </li>
+      <li class="menu-li">
+        <a routerLink="notification" routerLinkActive="active"
+          ><i class="material-icons">
+            add_alert
+          </i>
+          Thông Báo</a
+        >
+      </li>
+      <li class="menu-li">
+        <a routerLink="notification" routerLinkActive="active">
+          <i class="material-icons"> how_to_reg </i>Dịch Vụ Khách Hàng
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-content">
+    <mat-toolbar color="primary" id="toolbar">
+      <mat-toolbar-row>
+        <span
+          ><a
+            id="dashboat-hover"
+            routerLink="listUser"
+            routerLinkActive="active"
+            ><i class="material-icons">
+              dashboard
+            </i>
+            Dashboard</a
+          ></span
+        >
+        <span class="example-spacer"></span>
+        <div class="example-icon">
+          <input type="text" name="search" placeholder="Search.." />
+        </div>
+        <div class="example-icon">
+          <i class="material-icons">
+            dashboard
+          </i>
+          <i class="material-icons">
+            notification_important
+          </i>
+          <i class="material-icons">
+            perm_identity
+          </i>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div class="content container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

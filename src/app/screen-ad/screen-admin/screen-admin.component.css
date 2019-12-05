@@ -1,0 +1,125 @@
+.body-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  /* width: 200px; */
+  background: url("/assets/image/sidebar.jpg");
+  height: 100%; /* Full height */
+  /* position: fixed; Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.body-menu li a {
+  display: block;
+  color: #555;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.body-menu li a:hover {
+  background-color: #555;
+  color: white;
+}
+.body-menu li a:active {
+  background-color: #7fafe2;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba(244, 67, 54, 0.4);
+}
+.menu {
+  width: 15%;
+  max-height: 100%;
+  margin: 0px;
+}
+.content {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+}
+header {
+  overflow: hidden;
+  background-color: darkblue;
+  display: flex;
+}
+.header-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #131212;
+  display: flex;
+  justify-content: flex-start;
+  color: #f1f1f1;
+}
+
+.header-menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.header-menu li a:hover {
+  background-color: #111;
+}
+
+.search-right {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-icon input[type="text"] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.example-icon input[type="text"]:focus {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+.menu-li {
+  margin-top: 10px;
+}
+.nav-content {
+  width: 85%;
+  background-color: #f1f1f1;
+}
+#dashboat-hover:hover {
+  color: #f1f1f1;
+}
+hr {
+  background-color: #a28f8f;
+}
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 100vh;
+}
+mat-toolbar {
+  box-shadow: -2px 23px 13px -6px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: -2px 23px 13px -6px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -2px 23px 13px -6px rgba(0, 0, 0, 0.34);
+}
+#toolbar {
+  background-color: #0c375d;
+}

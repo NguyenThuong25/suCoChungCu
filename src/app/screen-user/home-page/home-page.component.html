@@ -1,0 +1,100 @@
+<div>
+  <div class="contact row">
+    <mat-toolbar class="row">
+      <mat-toolbar-row>
+        <span class="color-white ">
+          <i class="material-icons"> perm_phone_msg </i
+          >0395955744-0299999999</span
+        >
+        <span class="example-spacer"></span>
+        <div class="search ">
+          <mat-form-field class="example-full-width color-white  ">
+            <input matInput placeholder="search" />
+          </mat-form-field>
+          <button mat-button color="accent">
+            <i class="material-icons color-white">
+              search
+            </i>
+          </button>
+        </div>
+
+        <i class="material-icons color-white ">
+          home
+        </i>
+        <button mat-button color="accent">
+          <i class="material-icons color-white">
+            supervised_user_circle
+          </i>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+  <div class="nav-menu">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light navbar-fixed-top">
+      <a class="navbar-brand" href="#"
+        ><i class="material-icons"> home </i>HOUSE CARE</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContentXL"
+        aria-controls="navbarSupportedContentXL"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContentXL">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Trang Chủ <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="listIssue" routerLinkActive="active"
+              >Sự cố Chung Cư</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink="listNoti" routerLinkActive="active"
+              >Thông Báo Ban Quản lý</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Dịch Vụ Chung Cư</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="image-banner">
+    <h1>sự cố chung Cư</h1>
+  </div>
+  <hr />
+  <div class="content container">
+    <div class="menu">
+      <ul>
+        <p>Menu</p>
+        <li><a href="#home">Trang Chủ</a></li>
+        <hr />
+        <li>
+          <a routerLink="listIssue" routerLinkActive="active">Sự cố chung cư</a>
+        </li>
+        <hr />
+        <li>
+          <a routerLink="listNoti" routerLinkActive="active"
+            >Thông Báo Ban Quản Lý</a
+          >
+        </li>
+        <hr />
+        <li><a href="#about">Dịch Vụ Chung Cư</a></li>
+      </ul>
+    </div>
+    <div class="detail container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

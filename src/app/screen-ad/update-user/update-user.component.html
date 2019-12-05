@@ -1,0 +1,43 @@
+<div class="card">
+  <mat-card class="matCard">Thông Tin cư dân </mat-card>
+  <div [formGroup]="userForm" class="addUser-column">
+    <!-- <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="id" formControlName="id"></textarea>
+        </mat-form-field> -->
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="họ và tên"
+        [value]="user$.name"
+        formControlName="name"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="số phòng"
+        [value]="user$.address"
+        formControlName="address"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="email"
+        [value]="user$.email"
+        formControlName="email"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="số điện thoại"
+        [value]="user$.phone"
+        formControlName="phone"
+      ></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="updateUser()">
+      update
+    </button>
+  </div>
+</div>
