@@ -1,5 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { AngularFireStorage } from "@angular/fire/storage";
+import { finalize } from "rxjs/operators";
+import { Observable } from "rxjs";
 @Injectable({
   providedIn: "root"
 })
@@ -55,22 +58,46 @@ export class IssueService {
   //   }
   // ];
   private baseURL = "http://localhost:3000/issue";
-  constructor(private http: HttpClient) {}
-  getissuelist() {
+  downloadURL;
+  imageUrl;
+  constructor(private http: HttpClient, private storage: AngularFireStorage) {}
+  getListIssue() {
     return this.http.get(this.baseURL);
   }
-  getissue(id) {
+  getIssue(id) {
     return this.http.get(`${this.baseURL}/${id}`);
   }
-  createissue(user) {
-    return this.http.post(`${this.baseURL}`, user);
+  createIssue(issue) {
+    return this.http.post(`${this.baseURL}`, issue);
   }
 
-  updateissue(id, value) {
+  updateIssue(id, value) {
     return this.http.put(`${this.baseURL}/${id}`, value);
   }
 
-  deleteissue(id) {
+  deleteIssue(id) {
     return this.http.delete(`${this.baseURL}/${id}`);
+  }
+  updateImage(image: File, issueValue) {
+    // console.log(image)
+    const filePath = "Issue/" + image.name;
+    const ref = this.storage.ref(filePath);
+    const task = ref.put(image);
+    task
+      .snapshotChanges()
+      .pipe(
+        finalize(
+          () =>
+            (this.downloadURL = ref.getDownloadURL().subscribe(data => {
+              let url = data;
+
+              issueValue.image = url;
+              issueValue.status = "in_preview";
+              console.log(issueValue);
+              this.createIssue(issueValue).subscribe();
+            }))
+        )
+      )
+      .subscribe();
   }
 }

@@ -2,18 +2,18 @@
   display: flex;
   max-width: 100%;
   height: 35px;
-  background-color: #13314c;
+  background-color: #317bbb;
 }
-.example-icon {
+/* .example-icon {
   padding: 0 14px;
-}
+} */
 
 .example-spacer {
   flex: 1 1 auto;
 }
 .mat-toolbar-multiple-rows {
-  min-height: 50px;
-  background-color: #0d2840;
+  height: 50px;
+  background-color: #24659e;
 }
 .color-white {
   color: whitesmoke;
@@ -66,4 +66,21 @@
 h1 {
   text-align: center;
   padding-top: 50px;
+}
+.nav-link.active {
+  background-color: #5288d2;
+  color: #000;
+}
+.blue {
+  background-color: #5288d2;
+}
+.footer-copyright {
+  background-color: midnightblue;
+}
+.list-unstyled a {
+  color: #141619;
+  text-decoration: none;
+}
+.detail {
+  margin: 30px;
 }

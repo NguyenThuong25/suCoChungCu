@@ -1,6 +1,6 @@
 <div>
   <div class="contact row">
-    <mat-toolbar class="row">
+    <mat-toolbar class="col-md-12">
       <mat-toolbar-row>
         <span class="color-white ">
           <i class="material-icons"> perm_phone_msg </i
@@ -31,7 +31,7 @@
   </div>
   <div class="nav-menu">
     <nav class="navbar navbar-expand-xl navbar-light bg-light navbar-fixed-top">
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand" href=""
         ><i class="material-icons"> home </i>HOUSE CARE</a
       >
       <button
@@ -49,7 +49,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContentXL">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
+            <a class="nav-link"
               >Trang Chủ <span class="sr-only">(current)</span></a
             >
           </li>
@@ -70,31 +70,71 @@
       </div>
     </nav>
   </div>
-  <div class="image-banner">
-    <h1>sự cố chung Cư</h1>
+  <div class="image-banner row">
+    <div class="image-banner col-md-12"><h1>sự cố chung Cư</h1></div>
   </div>
   <hr />
-  <div class="content container">
-    <div class="menu">
-      <ul>
-        <p>Menu</p>
-        <li><a href="#home">Trang Chủ</a></li>
-        <hr />
-        <li>
-          <a routerLink="listIssue" routerLinkActive="active">Sự cố chung cư</a>
-        </li>
-        <hr />
-        <li>
-          <a routerLink="listNoti" routerLinkActive="active"
-            >Thông Báo Ban Quản Lý</a
-          >
-        </li>
-        <hr />
-        <li><a href="#about">Dịch Vụ Chung Cư</a></li>
-      </ul>
-    </div>
-    <div class="detail container">
-      <router-outlet></router-outlet>
+  <div class="content  row">
+    <div class="col-md-12">
+      <div class=" container ">
+        <div class="detail">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue pt-4 row">
+    <!-- Footer Links -->
+    <div class="col-md-12">
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase">HOUSE CARE</h5>
+            <p>
+              Hãy liên hệ với chúng tôi
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3" />
+
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Contact</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  0395599599-0293388888
+                </p>
+              </li>
+              <li>
+                <a href="#!"> số 111 Nguyễn Trãi-Thanh Xuân-Hà Nội</a>
+              </li>
+              <li>
+                <a href="#!">housecare@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2019 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/">
+          Thuongattt1@gmail.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </div>
+  </footer>
+  <!-- Footer -->
 </div>

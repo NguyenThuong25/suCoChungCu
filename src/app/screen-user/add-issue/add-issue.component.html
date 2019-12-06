@@ -1,22 +1,44 @@
 <div>
   <h1>Báo Cáo Sự Cố</h1>
-  <div [formGroup]="issueForm" class="add-noti">
-    <mat-form-field class="example-full-width">
-      <textarea
-        matInput
-        placeholder="tiêu đề"
-        formControlName="tittle"
-      ></textarea>
-    </mat-form-field>
-    <label for="exampleFormControlTextarea1">mô tả sự cố</label>
-    <textarea
-      class="form-control"
-      id="exampleFormControlTextarea1"
-      rows="3"
-    ></textarea>
-    <input type="file" name="myFile" />
-    <button mat-raised-button color="primary">
-      Thêm
-    </button>
+  <div class="card">
+    <div class="card-horizontal">
+      <div class="img-square-wrapper">
+        <img class="" src="" />
+      </div>
+      <div class="card-body">
+        <div [formGroup]="issueForm" class="add-noti">
+          <mat-form-field class="example-full-width">
+            <textarea
+              matInput
+              placeholder="tiêu đề"
+              formControlName="tittle"
+            ></textarea>
+          </mat-form-field>
+          <label for="exampleFormControlTextarea1">mô tả sự cố</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            formControlName="desc"
+            rows="3"
+          ></textarea>
+          <input
+            type="file"
+            accept="image/*"
+            (change)="uploadImage($event.target.files)"
+          />
+
+          <img [src]="imagePreview" />
+          <br />
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="submitForm()"
+            [disabled]="issueForm.invalid"
+          >
+            submit
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

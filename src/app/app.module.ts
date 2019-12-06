@@ -1,6 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireStorageModule } from "@angular/fire/storage";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -34,6 +36,8 @@ import { HomePageComponent } from "./screen-user/home-page/home-page.component";
 import { ListIssueComponent } from "./screen-user/list-issue/list-issue.component";
 import { ListNotiComponent } from "./screen-user/list-noti/list-noti.component";
 import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
+import { environment } from "../environments/environment";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +78,8 @@ import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
     Ng2SearchPipeModule,
     MatCardModule,
     MatTabsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
     StoreModule.forRoot(reducers, {
       runtimeChecks: {
         strictStateImmutability: true,

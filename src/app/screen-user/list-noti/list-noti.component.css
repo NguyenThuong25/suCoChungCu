@@ -35,3 +35,12 @@ table {
 .add {
   margin-bottom: 50px;
 }
+.search-hero {
+  width: 500px;
+
+  margin: 21px 20px 20px 44px;
+}
+
+.form-control {
+  box-shadow: 0 10px 40px 0 #b0c1d9;
+}

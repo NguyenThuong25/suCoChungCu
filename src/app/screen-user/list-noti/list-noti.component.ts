@@ -13,7 +13,7 @@ export interface Notification {
 export class ListNotiComponent implements OnInit {
   displayedColumns: string[] = ["id", "tittle", "desc"];
   notification;
-
+  searchText;
   // applyFilter(filterValue: string) {
   //   this.dataSource.filter = filterValue.trim().toLowerCase();
   // }
@@ -21,6 +21,8 @@ export class ListNotiComponent implements OnInit {
   constructor(private noti: NotificationService) {}
 
   ngOnInit() {
-    this.notification = this.noti.getNotilist();
+    this.noti.getNotilist().subscribe(u => {
+      this.notification = u;
+    });
   }
 }

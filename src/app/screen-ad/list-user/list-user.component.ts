@@ -31,10 +31,10 @@ export class ListUserComponent implements OnInit {
   searchText;
   listUser;
 
-  applyFilter(event) {
-    this.listUser.filter = event;
-    console.log(this.listUser);
-  }
+  // applyFilter(event) {
+  //   this.listUser.filter = event;
+  //   console.log(this.listUser);
+  // }
   constructor(
     private users: UserService,
     public dialog: MatDialog,
