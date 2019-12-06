@@ -13,14 +13,17 @@ import { HomePageComponent } from "./screen-user/home-page/home-page.component";
 import { ListIssueComponent } from "./screen-user/list-issue/list-issue.component";
 import { ListNotiComponent } from "./screen-user/list-noti/list-noti.component";
 import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
+import { DashboardComponent } from "./screen-ad/dashboard/dashboard.component";
 
 const routes: Routes = [
   { path: "", component: LoginAdComponent },
+  { path: "login", component: LoginAdComponent },
   {
     path: "screenAdmin",
 
     component: ScreenAdminComponent,
     children: [
+      { path: "dashboard", component: DashboardComponent },
       { path: "listUser", component: ListUserComponent },
       { path: "listRequest", component: ListRequestAdComponent },
       { path: "notification", component: NotificationComponent },

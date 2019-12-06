@@ -1,27 +1,31 @@
-<div>
-  <h1>thông tin thông báo</h1>
-  <div [formGroup]="notiForm" class="addUser-column" class="add-noti">
+<div class="card">
+  <mat-card class="matCard">TẠO THÔNG BÁO </mat-card>
+  <div [formGroup]="notiForm" class="addUser-column">
+    <!-- <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="id" formControlName="id"></textarea>
+        </mat-form-field> -->
     <mat-form-field class="example-full-width">
       <textarea
         matInput
-        placeholder="tiêu đề"
+        placeholder="Tiêu đề"
         formControlName="tittle"
       ></textarea>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <textarea
         matInput
-        placeholder="nội dung"
+        placeholder="Nội Dung Thông Báo"
         formControlName="desc"
       ></textarea>
     </mat-form-field>
+
     <button
       mat-raised-button
       color="primary"
       [disabled]="!notiForm.valid"
       (click)="addNoti()"
     >
-      Thêm
+      add
     </button>
   </div>
 </div>

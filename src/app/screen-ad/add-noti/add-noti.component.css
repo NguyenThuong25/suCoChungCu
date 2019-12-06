@@ -1,11 +1,38 @@
-.add-noti {
+.addUser-column {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  border: 1px solid gray;
-  border-radius: 5px;
   padding: 30px;
+}
+.matCard {
+  border-radius: 3px;
+  margin-top: -22px;
+  margin-left: 45px;
+  margin-right: 45px;
+  background-color: #5e59d8;
+  padding: 24px;
+  color: aliceblue;
   -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
   -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
   box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  max-width: 700px;
+}
+.d-flex {
+  display: flex;
+  max-width: 700px;
+}
+#img-house {
+  max-width: 500px;
 }

@@ -50,15 +50,7 @@ export class ListRequestAdComponent implements OnInit {
   listdone;
   listReject;
   searchText;
-  columnsToDisplay = [
-    "id",
-    "nameUser",
-    "address",
-    "phone",
-    "tittle",
-    "doing",
-    "reject"
-  ];
+  columnsToDisplay = ["id", "nameUser", "address", "phone", "tittle", "doing"];
   // status: Status[] = [
   //   { value: "inpreview", viewValue: "inpreview" },
   //   { value: "doing", viewValue: "doing" },
@@ -80,8 +72,8 @@ export class ListRequestAdComponent implements OnInit {
       this.listdone = this.listRequest.filter(e => {
         return e.status == "done";
       });
-      console.log(this.listRequest); //ra một mảng
-      console.log(this.listDoing); // ra mảng rỗng
+      console.log(this.listRequest);
+      console.log(this.listDoing);
     });
   }
   changeDoing(element) {
@@ -120,7 +112,7 @@ export class ListRequestAdComponent implements OnInit {
       console.log("The dialog was closed");
       if (result) {
         this.request.deleteRequest(id).subscribe(() => {
-          this.listRequest = this.listRequest.filter(u => {
+          this.listdone = this.listdone.filter(u => {
             return u.id != id;
           });
         });

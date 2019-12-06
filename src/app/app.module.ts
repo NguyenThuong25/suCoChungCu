@@ -37,6 +37,7 @@ import { ListIssueComponent } from "./screen-user/list-issue/list-issue.componen
 import { ListNotiComponent } from "./screen-user/list-noti/list-noti.component";
 import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
 import { environment } from "../environments/environment";
+import { DashboardComponent } from './screen-ad/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,9 @@ import { environment } from "../environments/environment";
 
     ListNotiComponent,
 
-    AddIssueComponent
+    AddIssueComponent,
+
+    DashboardComponent
   ],
   entryComponents: [DialogComponent],
   imports: [

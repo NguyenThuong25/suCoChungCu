@@ -1,0 +1,35 @@
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 300px;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-left: 45px;
+  -webkit-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  -moz-box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+  box-shadow: 4px 10px 11px -4px rgba(122, 162, 163, 1);
+}
+.text-white {
+  color: #fff !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.bg-success {
+  background-color: #28a745 !important;
+}
+.bg-do {
+  background-color: crimson !important;
+}
+.bg-vang {
+  background-color: #ecdf30 !important;
+}
+.flex {
+  display: flex;
+}

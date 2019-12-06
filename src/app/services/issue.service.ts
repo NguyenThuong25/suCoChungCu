@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { AngularFireStorage } from "@angular/fire/storage";
 import { finalize } from "rxjs/operators";
 import { Observable } from "rxjs";
+import { Router } from "@angular/router";
 @Injectable({
   providedIn: "root"
 })
@@ -60,7 +61,11 @@ export class IssueService {
   private baseURL = "http://localhost:3000/issue";
   downloadURL;
   imageUrl;
-  constructor(private http: HttpClient, private storage: AngularFireStorage) {}
+  constructor(
+    private http: HttpClient,
+    private storage: AngularFireStorage,
+    private router: Router
+  ) {}
   getListIssue() {
     return this.http.get(this.baseURL);
   }
@@ -94,7 +99,9 @@ export class IssueService {
               issueValue.image = url;
               issueValue.status = "in_preview";
               console.log(issueValue);
-              this.createIssue(issueValue).subscribe();
+              this.createIssue(issueValue).subscribe(() => {
+                this.router.navigateByUrl("/screenUser/listIssue");
+              });
             }))
         )
       )

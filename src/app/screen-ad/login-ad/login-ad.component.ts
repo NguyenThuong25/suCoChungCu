@@ -11,7 +11,7 @@ export class LoginAdComponent implements OnInit {
     console.log(user, pass);
 
     if (user == "admin" && pass == "admin") {
-      this.router.navigateByUrl("/screenAdmin/listUser");
+      this.router.navigateByUrl("/screenAdmin/dashboard");
     }
     if (user == "user" && pass == "user") {
       this.router.navigateByUrl("/screenUser/listNoti");
