@@ -27,6 +27,7 @@ export class ListIssueComponent implements OnInit {
       console.log("issue", u);
 
       this.listIssue = u.data.results;
+      console.log("su co", this.listIssue);
     });
   }
 }

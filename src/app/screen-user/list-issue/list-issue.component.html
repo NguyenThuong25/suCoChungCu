@@ -5,14 +5,25 @@
 </a>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 mt-3" *ngFor="let i of listIssue; let i = index">
+    <div class="col-12 mt-3" *ngFor="let i of listIssue; let index = index">
       <div class="card">
         <div class="card-horizontal">
           <div class="img-square-wrapper">
-            <img class="" src="/assets/image/suco.jpg" alt="Card image cap" />
+            <img
+              *ngIf="i.image.length > 0"
+              class="image"
+              src="{{ i.image[0].url }}"
+              alt="anh url"
+            />
+            <img
+              *ngIf="i.image.length === 0"
+              class="image"
+              src="http://tinnhanhvn.net/wp-content/uploads/2019/04/paris-notre-dame-reuters-2--300x300.jpg"
+              alt="khong co anh"
+            />
           </div>
           <div class="card-body">
-            <h4 class="card-title">{{ i.tittle }}</h4>
+            <h4 class="card-title">{{ i.title }}</h4>
             <p class="card-text">{{ i.desc }}</p>
           </div>
         </div>

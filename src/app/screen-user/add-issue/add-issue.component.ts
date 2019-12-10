@@ -16,7 +16,7 @@ import { IssueService } from "src/app/services/issue.service";
 export class AddIssueComponent implements OnInit {
   issueForm = this.fb.group({
     // id: ["", Validators.required],
-    tittle: ["", Validators.required],
+    title: ["", Validators.required],
     desc: ["", Validators.required],
     image: [""]
   });

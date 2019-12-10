@@ -91,7 +91,8 @@ export class IssueService {
     return this.http.delete(`${this.baseURL}/${id}`, this.httpOptions);
   }
   updateImage(image: File, issueValue) {
-    // console.log(image)
+    console.log(issueValue);
+
     const filePath = "Issue/" + image.name;
     const ref = this.storage.ref(filePath);
     const task = ref.put(image);
@@ -101,10 +102,11 @@ export class IssueService {
         finalize(
           () =>
             (this.downloadURL = ref.getDownloadURL().subscribe(data => {
-              let url = data;
+              let url = [];
+              url.push(data);
 
               issueValue.image = url;
-              issueValue.status = "in_preview";
+              // issueValue.status = "in_preview";
               console.log(issueValue);
               this.createIssue(issueValue).subscribe(() => {
                 this.router.navigateByUrl("/screenUser/listIssue");

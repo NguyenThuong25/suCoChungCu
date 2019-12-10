@@ -51,7 +51,6 @@ export class UpdateUserComponent implements OnInit {
     this.userService.getUser(id).subscribe((u: any) => {
       this.dataUser = u.data;
       this.userForm.patchValue(this.dataUser);
-      console.log("lấy user :", this.dataUser);
     });
   }
 }
