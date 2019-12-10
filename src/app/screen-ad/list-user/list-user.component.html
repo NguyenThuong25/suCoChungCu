@@ -54,8 +54,8 @@
     <ng-container matColumnDef="update">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <a routerLink="/screenAdmin/listUser/updateUser">
-          <button mat-button color="primary" (click)="chageUser(element)">
+        <a [routerLink]="['/screenAdmin/listUser/updateUser/' + element.id]">
+          <button mat-button color="primary">
             <i class="material-icons">
               create
             </i>

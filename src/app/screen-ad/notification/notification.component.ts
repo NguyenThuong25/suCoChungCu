@@ -27,7 +27,7 @@ import { DialogComponent } from "../dialog/dialog.component";
   styleUrls: ["./notification.component.css"]
 })
 export class NotificationComponent implements OnInit {
-  displayedColumns: string[] = ["id", "tittle", "desc", "delete"];
+  displayedColumns: string[] = ["id", "title", "desc", "delete"];
   notification;
   searchText;
   // applyFilter(filterValue: string) {
@@ -53,8 +53,9 @@ export class NotificationComponent implements OnInit {
   constructor(private noti: NotificationService, public dialog: MatDialog) {}
 
   ngOnInit() {
-    this.noti.getNotilist().subscribe(noti => {
-      this.notification = noti;
+    this.noti.getNotilist().subscribe((noti: any) => {
+      this.notification = noti.data.results;
+      console.log(this.notification);
     });
   }
 }

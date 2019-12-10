@@ -50,7 +50,7 @@ export class ListRequestAdComponent implements OnInit {
   listdone;
   listReject;
   searchText;
-  columnsToDisplay = ["id", "nameUser", "address", "phone", "tittle", "doing"];
+  columnsToDisplay = ["name", "address", "phone", "title", "doing"];
   // status: Status[] = [
   //   { value: "inpreview", viewValue: "inpreview" },
   //   { value: "doing", viewValue: "doing" },
@@ -61,17 +61,25 @@ export class ListRequestAdComponent implements OnInit {
   constructor(private request: RequestService, public dialog: MatDialog) {}
 
   ngOnInit() {
-    this.request.getRequestlist().subscribe(u => {
-      this.listRequest = u;
+    this.request.getRequestlist().subscribe((u: any) => {
+      this.listRequest = u.data.results;
+      console.log("test list requets", this.listRequest);
+
       this.listInpreview = this.listRequest.filter(e => {
-        return e.status === "in_preview";
+        return e.status === "in_preview" && e.author != null;
       });
+      console.log("test list in preview", this.listInpreview);
+
       this.listDoing = this.listRequest.filter(e => {
-        return e.status === "doing";
+        return e.status === "doing" && e.author != null;
       });
+      console.log("test list doing", this.listDoing);
+
       this.listdone = this.listRequest.filter(e => {
-        return e.status == "done";
+        return e.status == "done" && e.author != null;
       });
+      console.log("test list done", this.listdone);
+
       console.log(this.listRequest);
       console.log(this.listDoing);
     });
@@ -88,6 +96,7 @@ export class ListRequestAdComponent implements OnInit {
     this.listDoing = this.listRequest.filter(e => {
       return e.status === "doing";
     });
+    console.log("a1", element);
   }
   changeDone(element) {
     element.status = "done";

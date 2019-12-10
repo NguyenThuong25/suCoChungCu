@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { AngularFireStorage } from "@angular/fire/storage";
 import { finalize } from "rxjs/operators";
 import { Observable } from "rxjs";
@@ -58,8 +58,15 @@ export class IssueService {
   //     status: "done"
   //   }
   // ];
-  private baseURL = "http://localhost:3000/issue";
+  private baseURL = "http://10.124.2.82:8089/api/v1/issues";
+  // private baseURL = "http://localhost:3000/issue";
   downloadURL;
+  httpOptions = {
+    headers: new HttpHeaders({
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${localStorage.getItem("tokenUser")}`
+    })
+  };
   imageUrl;
   constructor(
     private http: HttpClient,
@@ -67,21 +74,21 @@ export class IssueService {
     private router: Router
   ) {}
   getListIssue() {
-    return this.http.get(this.baseURL);
+    return this.http.get(this.baseURL, this.httpOptions);
   }
   getIssue(id) {
-    return this.http.get(`${this.baseURL}/${id}`);
+    return this.http.get(`${this.baseURL}/${id}`, this.httpOptions);
   }
   createIssue(issue) {
-    return this.http.post(`${this.baseURL}`, issue);
+    return this.http.post(`${this.baseURL}`, issue, this.httpOptions);
   }
 
   updateIssue(id, value) {
-    return this.http.put(`${this.baseURL}/${id}`, value);
+    return this.http.put(`${this.baseURL}/${id}`, value, this.httpOptions);
   }
 
   deleteIssue(id) {
-    return this.http.delete(`${this.baseURL}/${id}`);
+    return this.http.delete(`${this.baseURL}/${id}`, this.httpOptions);
   }
   updateImage(image: File, issueValue) {
     // console.log(image)

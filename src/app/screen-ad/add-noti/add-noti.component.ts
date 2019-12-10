@@ -16,7 +16,7 @@ import { Router } from "@angular/router";
 export class AddNotiComponent implements OnInit {
   noti;
   notiForm = this.fb.group({
-    tittle: ["", Validators.required],
+    title: ["", Validators.required],
     desc: ["", Validators.required]
   });
   constructor(

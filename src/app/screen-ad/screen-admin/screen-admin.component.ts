@@ -11,6 +11,8 @@ export class ScreenAdminComponent implements OnInit {
 
   ngOnInit() {}
   logout() {
-    this.router.navigateByUrl("/");
+    // localStorage.removeItem("isLoggin");
+    localStorage.removeItem("token");
+    this.router.navigate(["/"]);
   }
 }

@@ -12,6 +12,8 @@ import { DialogComponent } from "../dialog/dialog.component";
 import { element } from "protractor";
 import { Store } from "@ngrx/store";
 import { updateUser } from "src/app/reducers/action";
+import { User } from "src/app/models/user.model";
+import { observable } from "rxjs";
 
 @Component({
   selector: "app-list-user",
@@ -31,10 +33,6 @@ export class ListUserComponent implements OnInit {
   searchText;
   listUser;
 
-  // applyFilter(event) {
-  //   this.listUser.filter = event;
-  //   console.log(this.listUser);
-  // }
   constructor(
     private users: UserService,
     public dialog: MatDialog,
@@ -42,10 +40,12 @@ export class ListUserComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.users.getUserlist().subscribe(u => {
-      this.listUser = u;
+    this.users.getUserlist().subscribe((u: any) => {
+      console.log("a", u.data.results);
+      this.listUser = u.data.results;
     });
-    console.log(this.listUser);
+
+    console.log("jhjkh", this.listUser);
   }
   openDialogDelete(id): void {
     const dialogRef = this.dialog.open(DialogComponent, {

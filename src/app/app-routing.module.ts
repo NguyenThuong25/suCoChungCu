@@ -14,6 +14,7 @@ import { ListIssueComponent } from "./screen-user/list-issue/list-issue.componen
 import { ListNotiComponent } from "./screen-user/list-noti/list-noti.component";
 import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
 import { DashboardComponent } from "./screen-ad/dashboard/dashboard.component";
+import { AuthGuard } from "./auth.guard";
 
 const routes: Routes = [
   { path: "", component: LoginAdComponent },
@@ -22,22 +23,30 @@ const routes: Routes = [
     path: "screenAdmin",
 
     component: ScreenAdminComponent,
+    canActivate: [AuthGuard],
     children: [
-      { path: "dashboard", component: DashboardComponent },
+      {
+        path: "dashboard",
+        component: DashboardComponent
+      },
       { path: "listUser", component: ListUserComponent },
       { path: "listRequest", component: ListRequestAdComponent },
       { path: "notification", component: NotificationComponent },
       { path: "listUser/addUser", component: AddUserComponent },
-      { path: "listUser/updateUser", component: UpdateUserComponent },
+      { path: "listUser/updateUser/:id", component: UpdateUserComponent },
       { path: "notification/addNoti", component: AddNotiComponent }
     ]
   },
   {
     path: "screenUser",
     component: HomePageComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: "listIssue", component: ListIssueComponent },
-      { path: "listNoti", component: ListNotiComponent },
+      {
+        path: "listNoti",
+        component: ListNotiComponent
+      },
       { path: "listIssue/addIssue", component: AddIssueComponent }
     ]
   }

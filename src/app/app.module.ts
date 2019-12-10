@@ -37,8 +37,8 @@ import { ListIssueComponent } from "./screen-user/list-issue/list-issue.componen
 import { ListNotiComponent } from "./screen-user/list-noti/list-noti.component";
 import { AddIssueComponent } from "./screen-user/add-issue/add-issue.component";
 import { environment } from "../environments/environment";
-import { DashboardComponent } from './screen-ad/dashboard/dashboard.component';
-
+import { DashboardComponent } from "./screen-ad/dashboard/dashboard.component";
+import { JwtModule } from "@auth0/angular-jwt";
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +83,15 @@ import { DashboardComponent } from './screen-ad/dashboard/dashboard.component';
     MatTabsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: function tokenGetter() {
+          return localStorage.getItem("access_token");
+        },
+        whitelistedDomains: ["localhost:3000"],
+        blacklistedRoutes: ["http://localhost:3000/auth/login"]
+      }
+    }),
     StoreModule.forRoot(reducers, {
       runtimeChecks: {
         strictStateImmutability: true,

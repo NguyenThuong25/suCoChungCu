@@ -29,7 +29,6 @@ tr.example-element-row:not(.example-expanded-row):active {
   padding: 8px;
   font-weight: lighter;
   margin: 8px 0;
-  height: 255px;
 }
 
 .example-element-symbol {
@@ -97,4 +96,8 @@ tr.example-element-row:not(.example-expanded-row):active {
 
 .form-control {
   box-shadow: 0 10px 40px 0 #b0c1d9;
+}
+.image {
+  width: 100%;
+  height: auto;
 }

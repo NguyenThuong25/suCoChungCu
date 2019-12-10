@@ -11,7 +11,7 @@ export interface Notification {
   styleUrls: ["./list-noti.component.css"]
 })
 export class ListNotiComponent implements OnInit {
-  displayedColumns: string[] = ["id", "tittle", "desc"];
+  displayedColumns: string[] = ["title", "desc"];
   notification;
   searchText;
   // applyFilter(filterValue: string) {
@@ -21,8 +21,9 @@ export class ListNotiComponent implements OnInit {
   constructor(private noti: NotificationService) {}
 
   ngOnInit() {
-    this.noti.getNotilist().subscribe(u => {
-      this.notification = u;
+    this.noti.getNotilist().subscribe((noti: any) => {
+      this.notification = noti.data.results;
+      console.log(this.notification);
     });
   }
 }

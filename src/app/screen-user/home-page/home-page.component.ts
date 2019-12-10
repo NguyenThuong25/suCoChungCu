@@ -10,7 +10,12 @@ export class HomePageComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {}
+  // logout() {
+  //   this.router.navigateByUrl("/");
+  // }
   logout() {
-    this.router.navigateByUrl("/");
+    // localStorage.removeItem("isLoggin");
+    localStorage.removeItem("tokenUser");
+    this.router.navigate(["/"]);
   }
 }
