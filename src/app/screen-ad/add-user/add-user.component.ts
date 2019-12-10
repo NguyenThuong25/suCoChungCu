@@ -16,15 +16,7 @@ import { Router } from "@angular/router";
 })
 export class AddUserComponent implements OnInit {
   user;
-  userForm = this.fb.group({
-    // id: ["", Validators.required],
-    password: ["", Validators.required],
-    username: ["", Validators.required],
-    name: ["", Validators.required],
-    address: ["", Validators.required],
-    email: ["", Validators.required],
-    phone: ["", Validators.required]
-  });
+  userForm;
   addUser() {
     this.user = this.userForm.value;
     console.log(this.user);
@@ -38,5 +30,15 @@ export class AddUserComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.userForm = this.fb.group({
+      // id: ["", Validators.required],
+      password: ["", Validators.required],
+      username: ["", Validators.required],
+      name: ["", Validators.required],
+      address: ["", Validators.required],
+      email: ["", [Validators.required, Validators.email]],
+      phone: ["", Validators.required]
+    });
+  }
 }

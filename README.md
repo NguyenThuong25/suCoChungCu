@@ -1,3 +1,22 @@
+# project quản lý chung cư
+
+project quản lý chung cư xây dựng bởi Nguyễn Thị Thương, fresher ở VinId
+Giúp người dùng chung cư báo cáo được sự cố của căn chung cư với ban quản lý, cập nhật được các thông báo của ban quản lý
+ban quản lý xem được các sự cố , giải quyết , thông báo đến user các notification của tòa
+Nhà
+Dự án được xây dựng cho đối tượng: người dùng chung cư và ban quản lý chung cư
+các chức năng của người dùng chung cư:
+-Login
+-Xem danh sách các sự cố của căn hộ
+-báo cáo sự cố của căn hộ đang sử dụng
+-Xem notification ban quản lý toàn nhà
+các chức năng của ban quản lý:
+
+-Quan ly user(thêm, sửa, xóa, tìm kiếm)
+-Login
+-Xem/ xử lý sự cố (đổi status, comfirm danh sách request sự cố )
+-Tạo notification (xóa , tìm kiếm)
+
 # ChungCu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
